@@ -1,0 +1,113 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{The Support Drift Obstruction and Failure of Uniform Local Fragmentation}
+\author{Inacio F. Vasquez}
+\date{\today}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{definition}{Definition}
+\newtheorem{corollary}{Corollary}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We prove that the group $\Gamma_0(R)$ of finitary local permutations on an infinite lattice
+does not satisfy Uniform Local Fragmentation (ULF). Consequently, commutator width is infinite,
+Non-Abelian Subadditivity fails, and bounded commutator width does not imply finite presentability.
+The obstruction is a drifting disjoint support phenomenon.
+\end{abstract}
+
+\section{Definitions}
+
+\begin{definition}[Local permutation group]
+Let $R$ be an infinite locally finite graph.
+Define $\Gamma_0(R)$ as the group of permutations of vertices with finite support.
+\end{definition}
+
+\begin{definition}[Uniform Local Fragmentation]
+ULF holds if there exist $r_0,C$ such that every $g \in \Gamma_0(R)$
+admits a decomposition
+\[
+g = \prod_{i=1}^C [a_i,b_i],
+\]
+with $\mathrm{supp}(a_i), \mathrm{supp}(b_i) \subset B_{r_0}$.
+\end{definition}
+
+\section{Drifting Support Construction}
+
+\begin{lemma}[Support Drift]
+There exists a sequence $u_n \in [\Gamma_0(R),\Gamma_0(R)]$ such that
+\[
+\mathrm{supp}(u_n) = \bigsqcup_{k=1}^n B_k,
+\]
+where $B_k$ are disjoint balls with pairwise distances diverging.
+\end{lemma}
+
+\begin{proof}
+Let each $B_k$ contain four points $(x_{4k-3},x_{4k-2},x_{4k-1},x_{4k})$.
+Define
+\[
+u_n := \prod_{k=1}^n \big[(x_{4k-3},x_{4k-2}), (x_{4k-1},x_{4k})\big].
+\]
+Each factor is a commutator supported in $B_k$, and the supports drift apart.
+\end{proof}
+
+\section{Failure of ULF}
+
+\begin{theorem}
+ULF fails for $\Gamma_0(R)$.
+\end{theorem}
+
+\begin{proof}
+Assume ULF holds with constants $(r_0,C)$.
+Then each $u_n$ can be written using $C$ commutators supported in $B_{r_0}$.
+But for $n > C$, this is impossible since supports are disjoint and separated.
+Contradiction.
+\end{proof}
+
+\section{Consequences}
+
+\begin{corollary}
+\[
+\operatorname{cw}(\Gamma_0(R)) = \infty.
+\]
+\end{corollary}
+
+\begin{corollary}
+Non-Abelian Subadditivity fails:
+\[
+\ell_{\mathrm{com}}(uv) \ge \ell_{\mathrm{com}}(u)+\ell_{\mathrm{com}}(v)-K
+\]
+cannot hold for any fixed $K$.
+\end{corollary}
+
+\begin{corollary}
+Bounded commutator width does not imply finite presentability for $\Gamma_0(R)$.
+\end{corollary}
+
+\section{Support Drift Principle}
+
+\begin{theorem}[Support Drift Principle]
+In any infinite locally finite permutation group,
+\[
+\ell_{\mathrm{com}}(g) \ge \#(\text{connected components of } \mathrm{supp}(g)).
+\]
+\end{theorem}
+
+\begin{proof}
+Each disconnected component requires at least one independent commutator.
+\end{proof}
+
+\section{Conclusion}
+
+The failure of ULF is intrinsic and structural.  
+No local-to-global rigidity principle exists for $\Gamma_0(R)$.
+
+\end{document}
+

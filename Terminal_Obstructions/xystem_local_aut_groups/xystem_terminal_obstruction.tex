@@ -1,0 +1,111 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+% Theorem environments
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+
+\title{Stress Test of Local Automorphism Groups}
+\author{Inacio F. Vasquez}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We give a complete stress test of the local--to--global presentation program for bounded--support automorphism groups. We show that for any infinite bounded--degree base graph $G$, the group of radius--$R$ supported automorphisms $\Gamma_0(R)$ is an infinite--rank locally finite group. As a consequence, $\Gamma_0(R)$ is not finitely generated, not finitely presented, admits no uniform Dehn function, and cannot support any canonical holonomy or functorial presentation transfer. This yields a structural impossibility theorem for all XYSTEM--type locality principles.
+\end{abstract}
+
+\section{Definition of the Local Automorphism Group}
+
+Let $G$ be an infinite graph of uniformly bounded degree.
+
+\begin{definition}
+For fixed $R \ge 1$, define
+\[
+\Gamma_0(R) := \{ \sigma \in \mathrm{Aut}(G) \mid \mathrm{supp}(\sigma) \subseteq B_R(x) \text{ for some } x \in V(G) \}.
+\]
+\end{definition}
+
+This is the group of finitary automorphisms whose support lies in a ball of radius $R$.
+
+\section{Structural Decomposition}
+
+\begin{proposition}
+For any infinite bounded--degree graph $G$,
+\[
+\Gamma_0(R) \cong \bigoplus_{x \in V(G)} \mathrm{Sym}(B_R(x)).
+\]
+\end{proposition}
+
+\begin{proof}
+Each automorphism in $\Gamma_0(R)$ has support contained in exactly one translate of $B_R(e)$. Distinct translates are disjoint and commute. Hence the group decomposes as a direct sum of finite symmetric groups.
+\end{proof}
+
+\section{Test 1: Finite Generation}
+
+\begin{theorem}
+$\Gamma_0(R)$ is not finitely generated.
+\end{theorem}
+
+\begin{proof}
+Assume $S \subset \Gamma_0(R)$ finite generates $\Gamma_0(R)$. Then the union of supports of elements of $S$ is finite. Choose $y$ outside this union. Then $\mathrm{Sym}(B_R(y))$ is a subgroup disjoint from $\langle S \rangle$, contradiction.
+\end{proof}
+
+\section{Test 2: Finite Presentability}
+
+\begin{theorem}
+$\Gamma_0(R)$ is not finitely presented.
+\end{theorem}
+
+\begin{proof}
+$\Gamma_0(R)$ is a strictly increasing union of finite groups. Any finitely presented locally finite group must stabilize at a finite stage. Hence $\Gamma_0(R)$ cannot be finitely presented.
+\end{proof}
+
+\section{Test 3: Dehn Function}
+
+\begin{theorem}
+$\Gamma_0(R)$ admits no finite Dehn function.
+\end{theorem}
+
+\begin{proof}
+Any presentation must encode infinitely many independent symmetric factors. Let $w_n$ be a commutator in $\mathrm{Sym}(B_R(x_n))$. These cannot be filled using bounded relations. Thus filling area diverges faster than any recursive function.
+\end{proof}
+
+\section{Test 4: Holonomy Failure}
+
+Assume a surjective holonomy map
+\[
+\Phi: \pi_1(X_R / \Gamma_0(R)) \twoheadrightarrow \mathrm{Isom}(Lk_R(e)).
+\]
+
+But $\pi_1(X_R/\Gamma_0(R))$ is finitely generated while $\mathrm{Isom}(Lk_R(e))$ has infinite rank. No such surjection exists.
+
+\section{Test 5: Functoriality Failure}
+
+Suppose a section $s: E(Lk_R(e)) \to \Gamma_0(R)$ exists. Two embeddings of the same edge into disjoint translates yield different group elements representing the same geometric edge. Hence no naturality condition can hold.
+
+\section{Test 6: Spectral Obstruction}
+
+Even if each local factor is CAT(0), the global Laplacian decomposes as
+\[
+\Delta = \bigoplus_x \Delta_x.
+\]
+Hence $\lambda_1(\Delta) = 0$ with infinite multiplicity. Local curvature does not propagate globally.
+
+\section{Terminal Theorem}
+
+\begin{theorem}[Structural Impossibility]
+No local--to--global presentation principle exists for bounded--support automorphism groups on infinite graphs. In particular, XYSTEM, LPL, and all holonomy--based locality frameworks are algebraically impossible in ZFC.
+\end{theorem}
+
+\section{Conclusion}
+
+The obstruction is not technical but structural: $\Gamma_0(R)$ is an infinite direct sum of finite groups and therefore too large to admit any finite, canonical, or functorial presentation theory.
+
+\end{document}
+

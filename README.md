@@ -16,6 +16,10 @@ This repository is a registered module of the Vasquez Index. Stable references, 
 
 ---
 
+## Context
+- Unified framework: https://inaciovasquez2020.github.io
+- Dashboard: https://inaciovasquez2020.github.io/vasquez-index/dashboard.html
+
 ## Technical Notes
 * **Integration:** This module is designed to interface with `urf-core` and `chronos-urf-rr` to maintain theoretical consistency across the ecosystem.
 * **Reproducibility:** To ensure consistent computational results, utilize the environment configurations defined in the `scientific-infrastructure` module.

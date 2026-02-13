@@ -1,0 +1,12 @@
+{
+  "data": {
+    "claim": "support-drift",
+    "model": "synthetic-bounded",
+    "parameters": {
+      "max_steps": 10,
+      "capacity_bound": 1
+    },
+    "observation": "support_changes_detected"
+  },
+  "sha256": "d6b6510899e3aa4b80a4f6f32826de431ca05d55ff8129c1d18ff40f0e406a62"
+}
